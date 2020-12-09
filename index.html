@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/handsfree@7.2.12/build/lib/assets/handsfree.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onload="loadStart()">
+    <div class="content" id="page-content">
+
+    </div>
+
+
     <script src="https://unpkg.com/handsfree@7.2.12/build/lib/handsfree.js"></script>
     <script>
         const handsfree = new Handsfree({ hand: true })
         handsfree.start()
     </script>
-    <script src="/index.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.71/Tone.js" integrity="sha512-MMhsGUm9ScMHraAiVa0OgZ1ivrXtwRUHh5092yi4oAs5+mq+zEst5LQ4bqBpaPUA7eU+g/C5fR0BQlLMEI2E5g==" crossorigin="anonymous"></script>
+    <!-- <script src="index.js" type="module"></script> -->
+    <script src="getPages.js"></script>
+    <script src="melodyMaker.js"></script>
 </body>
 
 </html>
