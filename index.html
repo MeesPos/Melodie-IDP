@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/handsfree@7.2.12/build/lib/assets/handsfree.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/handsfree@7.2.12/build/lib/assets/handsfree.css" />
 </head>
 
 <body>
-    <!-- <script src="https://unpkg.com/handsfree@7.2.12/build/lib/handsfree.js"></script> -->
+    <script src="https://unpkg.com/handsfree@7.2.12/build/lib/handsfree.js"></script>
+    <script>
+        const handsfree = new Handsfree({ hand: true })
+        handsfree.start()
+    </script>
     <script src="/index.js" type="module"></script>
 </body>
 
