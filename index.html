@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/handsfree@7.2.12/build/lib/assets/handsfree.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
 </head>
 
 <body onload="loadStart()">
@@ -14,16 +15,17 @@
 
     </div>
 
-
+    <!-- <script type="application/javascript" src="js/pageLoader.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.71/Tone.js"
+        integrity="sha512-MMhsGUm9ScMHraAiVa0OgZ1ivrXtwRUHh5092yi4oAs5+mq+zEst5LQ4bqBpaPUA7eU+g/C5fR0BQlLMEI2E5g=="
+        crossorigin="anonymous"></script>
+    <script src="/js/getPages.js"></script>
+    <script src="/js/melodyMaker.js"></script>
     <script src="https://unpkg.com/handsfree@7.2.12/build/lib/handsfree.js"></script>
     <script>
         const handsfree = new Handsfree({ hand: true })
         handsfree.start()
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.71/Tone.js" integrity="sha512-MMhsGUm9ScMHraAiVa0OgZ1ivrXtwRUHh5092yi4oAs5+mq+zEst5LQ4bqBpaPUA7eU+g/C5fR0BQlLMEI2E5g==" crossorigin="anonymous"></script>
-    <!-- <script src="index.js" type="module"></script> -->
-    <script src="getPages.js"></script>
-    <script src="melodyMaker.js"></script>
 </body>
 
 </html>
