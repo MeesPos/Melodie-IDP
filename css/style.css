@@ -2,10 +2,20 @@
   font-family: Impact;
   src: url(/fonts/impact.ttf);
 }
+@font-face {
+  font-family: Akzidenz Regular;
+  src: url(/fonts/Akzidenz-grotesk-regular.ttf);
+}
+@font-face {
+  font-family: Akzidenz Bold;
+  src: url(/fonts/Akzidenz-grotesk-bold.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   font-size: Impact;
+  background-color: #222222;
+  color: #ebebeb;
 }
 
 .o-page-loader {
@@ -70,6 +80,53 @@
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+.header {
+  text-align: center;
+  margin-top: 20vh;
+}
+.header__titel {
+  font-size: 150px;
+  margin: 0;
+}
+.header__description {
+  width: 40vw;
+  margin: 0 auto;
+}
+.header__button {
+  width: 18vw;
+  height: 100px;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 11px 14px 0px rgba(26, 26, 26, 0.97) !important;
+  cursor: pointer;
+  font-family: Impact;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin: 20px;
+  margin-top: 10vh;
+}
+.header__button:focus {
+  outline: none;
+}
+.header__button .artiest {
+  background: #453b7e;
+}
+.header__button .start {
+  background: #1e6ea9;
+}
+
+.artiest {
+  background-color: #453b7e;
+}
+
+.start {
+  background-color: #1e6ea9;
+}
+
+h1 {
+  font-family: Impact;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=style.css.map */
