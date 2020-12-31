@@ -14,7 +14,6 @@
   margin: 0;
   padding: 0;
   font-size: Impact;
-  background-color: #222222;
   color: #ebebeb;
 }
 
@@ -83,28 +82,34 @@
 }
 .header {
   text-align: center;
-  margin-top: 20vh;
+  height: 100vh;
+  background-image: url(/img/header_back.jpg);
+  background-size: 100vw 100vh;
 }
 .header__titel {
   font-size: 150px;
   margin: 0;
+  padding-top: 15vh;
+  background: none;
 }
 .header__description {
-  width: 40vw;
-  margin: 0 auto;
+  width: 58vw;
+  margin: 1.5vh auto;
+  font-size: 19.5px;
+  line-height: 35px;
 }
 .header__button {
-  width: 18vw;
-  height: 100px;
+  width: 28vw;
+  height: 150px;
   border-radius: 100px;
   border: none;
   box-shadow: 11px 14px 0px rgba(26, 26, 26, 0.97) !important;
   cursor: pointer;
   font-family: Impact;
-  font-size: 50px;
+  font-size: 80px;
   text-transform: uppercase;
-  margin: 20px;
-  margin-top: 10vh;
+  margin: 30px;
+  margin-top: 8.5vh;
 }
 .header__button:focus {
   outline: none;
@@ -127,6 +132,20 @@
 h1 {
   font-family: Impact;
   font-weight: 100;
+}
+
+.carousel {
+  height: 100vh;
+  background: url(/img/carousel_back.jpg);
+  background-size: 100vw 100vh;
+  text-align: center;
+}
+.carousel > h2 {
+  font-size: 75px;
+  margin: 0;
+  padding-top: 15vh;
+  background: none;
+  font-family: "Impact";
 }
 
 /*# sourceMappingURL=style.css.map */
