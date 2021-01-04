@@ -11,3 +11,19 @@
         font-family: 'Impact';
     }
 }
+
+.owl-carousel{
+    & .werk-card{
+        background-color: $cardgray;
+        width: 60%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 60px;
+        & > p{
+            color: $cardblack;
+            line-height: 25px;
+            margin-top: 25px;
+            padding-bottom: 25px;
+        }
+    }
+}

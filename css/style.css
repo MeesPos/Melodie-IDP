@@ -148,4 +148,18 @@ h1 {
   font-family: "Impact";
 }
 
+.owl-carousel .werk-card {
+  background-color: #eaeaea;
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 60px;
+}
+.owl-carousel .werk-card > p {
+  color: #141414;
+  line-height: 25px;
+  margin-top: 25px;
+  padding-bottom: 25px;
+}
+
 /*# sourceMappingURL=style.css.map */
