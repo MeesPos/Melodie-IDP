@@ -139,6 +139,7 @@ h1 {
   background: url(/img/carousel_back.jpg);
   background-size: 100vw 100vh;
   text-align: center;
+  overflow: hidden;
 }
 .carousel > h2 {
   font-size: 75px;
@@ -151,7 +152,6 @@ h1 {
 .owl-carousel .werk-card {
   background-color: #eaeaea;
   width: 60%;
-  margin: 0 auto;
   padding: 20px;
   border-radius: 60px;
 }
@@ -160,6 +160,49 @@ h1 {
   line-height: 25px;
   margin-top: 25px;
   padding-bottom: 25px;
+}
+
+.owl-item.right {
+  justify-content: left;
+}
+
+.owl-item.left {
+  position: absolute;
+  left: 11vw;
+}
+
+.owl-item.center > div {
+  transition: 0.7s;
+  transform: scale(1.2);
+  float: none;
+  margin: 0 auto;
+}
+
+.owl-stage {
+  height: 60vh !important;
+  padding-top: 10vh;
+}
+
+.owl-nav [class*=owl-] {
+  position: relative !important;
+}
+
+.owl-nav {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+}
+.owl-nav [class*=owl-] {
+  background: none !important;
+  font-size: 40px !important;
+  color: black !important;
+  position: absolute !important;
+  top: 40%;
+}
+.owl-nav .owl-prev {
+  left: 1vw;
+}
+.owl-nav .owl-next {
+  right: 1vw;
 }
 
 #melody {
