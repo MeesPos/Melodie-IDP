@@ -5,6 +5,12 @@ function loadStart() {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("page-content").innerHTML = this.responseText;
 
+            $(".myLoader").fakeLoader({
+                timeToHide: 10000,
+                bgColor: "#222222",
+                spinner: "spinner6",
+                zIndex: "999"
+            });
         };
     }
     xhttp.open("GET", "startPage.html", true);
@@ -70,12 +76,12 @@ function initCarousel() {
             }
         });
 
-        $('.owl-carousel').on('translate.owl.carousel', function(e){
+        $('.owl-carousel').on('translate.owl.carousel', function (e) {
             idx = e.item.index;
             $('.owl-item.right').removeClass('right');
-            $('.owl-item').eq(idx+1).addClass('right');
+            $('.owl-item').eq(idx + 1).addClass('right');
             $('.owl-item.left').removeClass('left');
-            $('.owl-item').eq(idx-1).addClass('left');
-        });    
+            $('.owl-item').eq(idx - 1).addClass('left');
+        })
     }, 100);
 }
