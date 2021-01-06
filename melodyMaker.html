@@ -3,10 +3,17 @@
     <p class="melody_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate, libero non
         rutrum euismod, nunc leo ultricies dolor, vitae ultricies mauris ex pellentesque massa. Integer metus ante,
         gravida in nibh id, pharetra tempor tellus. Integer hendrerit augue ut lectus finibus fermentum. </p>
+    <div class="timeline__holder">
+        <div class="timeline__time time" id="duratie">
+            0:00
+        </div>    
+        <div class="timeline" id="timelijn"></div>
+        <div class="playbutton"><i class="fas fa-play" onclick="tijdlijn.play()"></i></div>
+    </div>
     <div class="piano-container">
         <div class="grayTop"></div>
         <div class="piano">
-            <button class="white-key" onclick="playTone('A4')"></button>
+            <button class="white-key" onclick="playTone('A2')"></button>
             <button class="black-key b-1" onclick="playTone('B4')"></button>
             <button class="white-key" onclick="playTone('C4')"></button>
             <button class="black-key b-2" onclick="playTone('D4')"></button>
