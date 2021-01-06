@@ -253,4 +253,20 @@ h1 {
   height: 10vh;
 }
 
+.timeline__holder {
+  margin: 0 10%;
+  margin-top: 2.5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timeline__time {
+  background-color: #453b7e;
+  padding: 20px 40px;
+  font-size: 30px;
+  border-radius: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
 /*# sourceMappingURL=style.css.map */
