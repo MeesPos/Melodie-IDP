@@ -102,3 +102,80 @@
     border-radius: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#timelijn{
+    overflow: visible;
+    display: grid;
+    grid-template-rows: repeat(17, 1fr);
+    grid-template-columns: repeat(120, 50px);
+    overflow-y: scroll;
+    width: 50vw;
+    height: 180px;
+    border-right: 5px solid white;
+    border-left: 5px solid white;
+    gap: 5px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    white-space: nowrap;
+    padding: 0 10px;
+    &::-webkit-scrollbar{
+        display: none;
+    } & .A2{
+        grid-row: 1/17;
+        background-color: blue;
+    } & .B4{
+        grid-row: 2/17;
+        background-color: red;
+    } & .C4{
+        grid-row: 3/17;
+        background-color: orangered;
+    } & .D4{
+        grid-row: 4/17;
+        background-color: green;
+    } & .E4{
+        grid-row: 5/17;
+        background-color: pink;
+    } & .F4{
+        grid-row: 6/17;
+        background-color: white;
+    } & .G4{
+        grid-row: 7/17;
+        background-color: purple;
+    } & .A5{
+        grid-row: 8/17;
+        background-color: #33AFFF;
+    } & .B5{
+        grid-row: 9/17;
+        background-color: #DE0000;
+    } & .C5{
+        grid-row: 10/17;
+        background-color: #FF8F00;
+    } & .D5{
+        grid-row: 11/17;
+        background-color: #00FF13;
+    } & .E5{
+        grid-row: 12/17;
+        background-color: #FF6DBF;
+    } & .F5{
+        grid-row: 13/17;
+        background-color: #DEDEDE;
+    } & .G5{
+        grid-row: 14/17;
+        background-color: #FF00B9;
+    } & .A6{
+        grid-row: 15/17;
+        background-color: #7D33FF;
+    } & .B6{
+        grid-row: 16/17;
+        background-color: #B00000;
+    } & .C6{
+        grid-row: 17/17;
+        background-color: #C86100;
+    }
+}
+
+.tone{
+    height: calc(180px / 17);
+    width: 50px;
+    border-radius: 5px;
+}
