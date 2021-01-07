@@ -205,6 +205,13 @@ h1 {
   right: 1vw;
 }
 
+.startRef {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  cursor: pointer;
+}
+
 #melody {
   height: 100vh;
   background: url(/img/melody_back.jpg);
@@ -294,6 +301,13 @@ h1 {
   width: 100vw;
   background-color: #2E2E2E;
   height: 10vh;
+}
+
+.backRef {
+  position: absolute;
+  left: 2vw;
+  top: 2vw;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
