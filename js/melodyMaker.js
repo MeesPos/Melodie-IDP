@@ -1,11 +1,12 @@
 //create a synth and connect it to the main output (your speakers)
 let synth = new Tone.Synth().toDestination();
+
 function playTone(note) {
     //play a middle 'C' for the duration of an 8th note
     console.log(note);
     synth.triggerAttackRelease(note, "8n");
     tijdlijn.voegToonToe(note);
-    document.getElementById('timelijn').innerHTML += `<div class="tone ${note}​​"></div>`
+    document.getElementById('timelijn').innerHTML += `<div class="tone ${note}"></div>`
 }
 /**
  * Stappenplan Tijdlijn
@@ -22,8 +23,7 @@ let tijdlijn = {
     },
 
     refreshPage() {
-        document.getElementById('duratie').innerHTML = this.duratie + ' s';
-        
+        document.getElementById('duratie').innerHTML = this.duratie + ' s';    
     },
 
     play() {
@@ -40,8 +40,6 @@ let tijdlijn = {
         document.getElementById('button').classList.add('fa-square');
         document.getElementById('button').removeAttribute('onclick', 'tijdlijn.play()');
         document.getElementById('button').setAttribute('onclick', 'tijdlijn.stop()');
-
-
     },
 
     stop() {
@@ -54,5 +52,4 @@ let tijdlijn = {
         document.getElementById('button').setAttribute('onclick', 'tijdlijn.play()');
 
     }
-
 }

@@ -326,6 +326,7 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
+
 .playbutton {
   display: flex;
   align-content: center;
@@ -339,6 +340,101 @@ h1 {
   align-self: center;
   margin: 0 auto;
   font-size: 25px;
+}
+
+#timelijn {
+  overflow: visible;
+  display: grid;
+  grid-template-rows: repeat(17, 1fr);
+  grid-template-columns: repeat(120, 50px);
+  overflow-y: scroll;
+  width: 50vw;
+  height: 180px;
+  border-right: 5px solid white;
+  border-left: 5px solid white;
+  gap: 5px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  white-space: nowrap;
+  padding: 0 10px;
+}
+#timelijn::-webkit-scrollbar {
+  display: none;
+}
+#timelijn .A2 {
+  grid-row: 1/17;
+  background-color: blue;
+}
+#timelijn .B4 {
+  grid-row: 2/17;
+  background-color: red;
+}
+#timelijn .C4 {
+  grid-row: 3/17;
+  background-color: orangered;
+}
+#timelijn .D4 {
+  grid-row: 4/17;
+  background-color: green;
+}
+#timelijn .E4 {
+  grid-row: 5/17;
+  background-color: pink;
+}
+#timelijn .F4 {
+  grid-row: 6/17;
+  background-color: white;
+}
+#timelijn .G4 {
+  grid-row: 7/17;
+  background-color: purple;
+}
+#timelijn .A5 {
+  grid-row: 8/17;
+  background-color: #33AFFF;
+}
+#timelijn .B5 {
+  grid-row: 9/17;
+  background-color: #DE0000;
+}
+#timelijn .C5 {
+  grid-row: 10/17;
+  background-color: #FF8F00;
+}
+#timelijn .D5 {
+  grid-row: 11/17;
+  background-color: #00FF13;
+}
+#timelijn .E5 {
+  grid-row: 12/17;
+  background-color: #FF6DBF;
+}
+#timelijn .F5 {
+  grid-row: 13/17;
+  background-color: #DEDEDE;
+}
+#timelijn .G5 {
+  grid-row: 14/17;
+  background-color: #FF00B9;
+}
+#timelijn .A6 {
+  grid-row: 15/17;
+  background-color: #7D33FF;
+}
+#timelijn .B6 {
+  grid-row: 16/17;
+  background-color: #B00000;
+}
+#timelijn .C6 {
+  grid-row: 17/17;
+  background-color: #C86100;
+}
+
+.tone {
+  height: calc(180px / 17);
+  width: 50px;
+  border-radius: 5px;
+
 }
 
 /*# sourceMappingURL=style.css.map */

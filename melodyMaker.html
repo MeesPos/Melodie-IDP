@@ -5,10 +5,14 @@
         rutrum euismod, nunc leo ultricies dolor, vitae ultricies mauris ex pellentesque massa. Integer metus ante,
         gravida in nibh id, pharetra tempor tellus. Integer hendrerit augue ut lectus finibus fermentum. </p>
     <div class="timeline__holder">
-        <div class="timeline__time time" id="duratie">
-            0 s
-        </div>    
-        <div class="timeline" id="timelijn"></div>
+        <div class="time__cont">
+            <div class="timeline__time time" id="duratie">
+                0 s
+            </div>
+        </div>
+        <div class="tijdlijn__cont">
+            <div class="timeline" id="timelijn"></div>
+        </div>
         <div class="playbutton"><i id="button" class="fas fa-play play-icon" onclick="tijdlijn.play()"></i></div>
     </div>
     <div class="piano-container">
@@ -34,3 +38,14 @@
         </div>
     </div>
 </section>
+
+<script>
+    var el_up = document.getElementById("GFG_UP");
+    var el_down = document.getElementById("GFG_DOWN");
+    el_up.innerHTML =
+        "Click on the button to scroll to the particular element.";
+
+    function gfg_Run() {
+        $(window).scrollTop($('#GFG_DOWN').position().top);
+    } 
+</script>
