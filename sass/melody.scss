@@ -80,6 +80,13 @@
     height: 10vh;
 }
 
+.backRef{
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    cursor: pointer;
+}
+
 .timeline__holder {
     margin: 0 10%;
     margin-top: 2.5%;
@@ -87,6 +94,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
 .timeline__time {
     background-color: $purple;
     padding: 20px 40px;
@@ -94,4 +102,3 @@
     border-radius: 50px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
