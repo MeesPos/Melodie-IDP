@@ -8,7 +8,6 @@ function playTone(note) {
     tijdlijn.voegToonToe(note);
     document.getElementById('timelijn').innerHTML += `<div class="tone ${note}"></div>`
 }
-
 /**
  * Stappenplan Tijdlijn
  * - Bij toevoeging van noot, stop noot in array plus verhoog de tijdlijn-tijd met een halve seconde (1/8 note)
@@ -24,37 +23,33 @@ let tijdlijn = {
     },
 
     refreshPage() {
-        document.getElementById('duratie').innerHTML = this.duratie + ' seconde(n)';
+        document.getElementById('duratie').innerHTML = this.duratie + ' s';    
     },
 
     play() {
-        time = 0
-        let jonguh = 0;
         new Tone.Sequence((time, note) => {
             console.log(time)
             synth.triggerAttackRelease(note, .25, time);
             console.log(time, note);
         }, this.alleTonen, '4n').start(0);
         Tone.Transport.start();
-        setInterval(() => { Tone.Transport.stop() }, this.alleTonen.length * 1000 * .5 - 100);
+        setInterval(() => { tijdlijn.stop() }, this.alleTonen.length * 1000 * .5 - 100);
+        document.getElementById('button').classList.remove('fas');
+        document.getElementById('button').classList.remove('fa-play');
+        document.getElementById('button').classList.add('far');
+        document.getElementById('button').classList.add('fa-square');
+        document.getElementById('button').removeAttribute('onclick', 'tijdlijn.play()');
+        document.getElementById('button').setAttribute('onclick', 'tijdlijn.stop()');
     },
-}
 
-function animatethis(targetElement, speed) {
-    var scrollWidth = $(targetElement).get(0).scrollWidth;
-    var clientWidth = $(targetElement).get(0).clientWidth;
-    $(targetElement).animate({ scrollLeft: scrollWidth - clientWidth },
-    {
-        duration: speed,
-        complete: function () {
-            targetElement.animate({ scrollLeft: 0 },
-            {
-                duration: speed,
-                complete: function () {
-                    animatethis(targetElement, speed);
-                }
-            });
-        }
-    });
-};
-animatethis($('#timelijn'), 5000);
+    stop() {
+        Tone.Transport.stop();
+        document.getElementById('button').classList.remove('far');
+        document.getElementById('button').classList.remove('fa-square');
+        document.getElementById('button').classList.add('fas');
+        document.getElementById('button').classList.add('fa-play');
+        document.getElementById('button').removeAttribute('onclick', 'tijdlijn.stop()');
+        document.getElementById('button').setAttribute('onclick', 'tijdlijn.play()');
+
+    }
+}
