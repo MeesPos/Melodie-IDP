@@ -1,0 +1,19 @@
+.virtualRoom{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/img/header_back.jpg);
+    background-size: 100vw 100vh;
+}
+
+.video iframe,
+.video object,
+.video embed {
+  position: absolute!important;
+  top: 40px;
+  left: 160px;
+}
+
+.backref{
+    position: relative;
+    z-index: 9999999px;
+}
