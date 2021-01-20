@@ -7,6 +7,7 @@ function playTone(note) {
     synth.triggerAttackRelease(note, "8n");
     tijdlijn.voegToonToe(note);
     document.getElementById('timelijn').innerHTML += `<div class="tone ${note}"></div>`
+    document.getElementById('timelijn').scrollBy(100, 0);
 }
 /**
  * Stappenplan Tijdlijn
