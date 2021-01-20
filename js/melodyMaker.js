@@ -23,7 +23,7 @@ let tijdlijn = {
             this.alleTonen.push(toon);
             this.refreshPage();
         } else {
-            alert('Maximale lengte bereikt.')
+            loadVirtualRoom();
         }
         
     },
