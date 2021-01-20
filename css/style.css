@@ -456,7 +456,6 @@ h1 {
   z-index: 9999999px;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
@@ -470,7 +469,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
 .modal-content {
   margin: 15% auto;
   width: 80%;
