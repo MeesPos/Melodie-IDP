@@ -5,11 +5,25 @@ function loadStart() {
             document.getElementById("page-content").innerHTML = this.responseText;
 
             $(".myLoader").fakeLoader({
-                timeToHide: 10000,
+                timeToHide: 1,
                 bgColor: "#222222",
                 spinner: "spinner6",
                 zIndex: "999"
             });
+
+            let modal = document.getElementById("video-modal");
+
+            modal.style.display = "block";
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // setTimeout(function() {
+                // modal.style.display = "none";
+            // }, 10000); Moet nog naar tijd van Mitchel zijn video
         };
     }
     xhttp.open("GET", "startPage.html", true);
