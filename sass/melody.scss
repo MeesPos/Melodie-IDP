@@ -107,14 +107,15 @@
     display: flex;
     align-content: center;
     justify-items: center;
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     background-color: $purple;
     border-radius: 50px;
     & > .play-icon {
         align-self: center;
         margin: 0 auto;
-        font-size: 25px;
+        font-size: 55px;
+        padding-left: 6px;
     }
 }
 
