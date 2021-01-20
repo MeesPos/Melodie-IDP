@@ -17,9 +17,15 @@ let tijdlijn = {
     alleTonen: [],
 
     voegToonToe(toon) {
-        this.duratie += 0.5;
-        this.alleTonen.push(toon);
-        this.refreshPage();
+        if (this.duratie < 60) {
+            // Als duratie minder dan of gelijk is aan 60 sec
+            this.duratie += 0.5;
+            this.alleTonen.push(toon);
+            this.refreshPage();
+        } else {
+            alert('Maximale lengte bereikt.')
+        }
+        
     },
 
     refreshPage() {

@@ -339,6 +339,7 @@ h1 {
   align-self: center;
   margin: 0 auto;
   font-size: 55px;
+  padding-left: 6px;
 }
 
 #timelijn {
