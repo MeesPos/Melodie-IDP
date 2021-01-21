@@ -27,6 +27,7 @@ let tijdlijn = {
     toonOpslag: [],
     index: 0,
     initialized: false, // whether or not we have run the initialize code yet.
+    loop: false,
 
     voegToonToe(toon, toonID) {
         if (this.duratie < 60) {
@@ -69,7 +70,10 @@ let tijdlijn = {
         if (!this.initialized) this.initialize();
         Tone.Transport.start();
         
-        this.setButtonActive();
+        if(this.loop == false) {
+            this.setButtonActive();
+        }
+        
       },
     initialize() {
         this.initialized = true; // set this to true so that line 17 doesnt call this again.
@@ -78,25 +82,44 @@ let tijdlijn = {
         Tone.Transport.scheduleRepeat((time) => {
             this.playReal(time);
         }, "8n");
-        this.setButtonActive();
+        if(this.loop == false) {
+            this.setButtonActive();
+        }
         
     },
-
-
     playReal(time) {
         // Make array with all tones to play
         let alleTonen = this.toonOpslag.map((a) => a.tone);
-
+   
         if(this.index == alleTonen.length) {
-            this.stop();
+            if( this.loop == false ) {
+                this.stop(); 
+            }
             this.index = 0;
         } else {
-           let noteToPlay = alleTonen[this.index]; 
-           synth.triggerAttackRelease(noteToPlay, '8n', time);
-           this.index++;
-        }
+            let noteToPlay = alleTonen[this.index]; 
+            synth.triggerAttackRelease(noteToPlay, '8n', time);
+            this.index++;
+        }  
     },
+    playEndlessMelody() {
+        let alleTonen = this.toonOpslag.map((a) => a.tone);
 
+        new Tone.Sequence((time, note) => {
+            console.log(time)
+            synth.triggerAttackRelease(note, .25, time);
+            console.log(time, note);
+        }, alleTonen, '4n').start(0);
+        Tone.Transport.start();
+
+        this.loop = true;
+    },
+    stopEndlessMelody() {
+        // Reset
+        Tone.Transport.stop();
+        document.location.reload();
+        
+    },
     setButtonActive() {
         // Change playbutton
         document.getElementById('button').classList.remove('fas');
