@@ -21,6 +21,8 @@ function playTone(note) {
 let tijdlijn = {
     duratie: 0,
     toonOpslag: [],
+    index: 0,
+    initialized: false, // whether or not we have run the initialize code yet.
 
     voegToonToe(toon, toonID) {
         if (this.duratie < 60) {
@@ -54,20 +56,39 @@ let tijdlijn = {
     },
 
     play() {
-
-        // Make array with all tones to play
-        let alleTonen = this.toonOpslag.map(a => a.tone);
-
-        new Tone.Sequence((time, note) => {
-            synth.triggerAttackRelease(note, .25, time);
-        }, alleTonen, '4n').start(0);
-
-        // Play the music
+        // if we havent initialized, call initialize
+        if (!this.initialized) this.initialize();
         Tone.Transport.start();
-        Tone.Transport.debug = true;
-        // After time elapsed stop playing
-        setInterval(() => { tijdlijn.stop() }, this.toonOpslag.length * 1000 * .5 - 100);
+        
+        this.setButtonActive();
+      },
+    initialize() {
+        this.initialized = true; // set this to true so that line 17 doesnt call this again.
+        Tone.start(); // the console was saying this needs to be called on a user action (like "click")
+        // you only want this part happening once. it was happening on every click.
+        Tone.Transport.scheduleRepeat((time) => {
+            this.playReal(time);
+        }, "8n");
+        this.setButtonActive();
+        
+    },
 
+
+    playReal(time) {
+        // Make array with all tones to play
+        let alleTonen = this.toonOpslag.map((a) => a.tone);
+
+        if(this.index == alleTonen.length) {
+            this.stop();
+            this.index = 0;
+        } else {
+           let noteToPlay = alleTonen[this.index]; 
+           synth.triggerAttackRelease(noteToPlay, '8n', time);
+           this.index++;
+        }
+    },
+
+    setButtonActive() {
         // Change playbutton
         document.getElementById('button').classList.remove('fas');
         document.getElementById('button').classList.remove('fa-play');
@@ -76,7 +97,6 @@ let tijdlijn = {
         document.getElementById('button').removeAttribute('onclick', 'tijdlijn.play()');
         document.getElementById('button').setAttribute('onclick', 'tijdlijn.stop()');
     },
-
     stop() {
         // Stop music mid playing
         Tone.Transport.stop();
