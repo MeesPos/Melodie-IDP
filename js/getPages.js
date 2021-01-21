@@ -5,14 +5,39 @@ function loadStart() {
             document.getElementById("page-content").innerHTML = this.responseText;
 
             $(".myLoader").fakeLoader({
-                timeToHide: 10000,
+                timeToHide: 1,
                 bgColor: "#222222",
                 spinner: "spinner6",
                 zIndex: "999"
             });
+
+            let modal = document.getElementById("video-modal");
+
+            modal.style.display = "block";
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+
+            // setTimeout(function() {
+                // modal.style.display = "none";
+            // }, 10000); Moet nog naar tijd van Mitchel zijn video
         };
     }
     xhttp.open("GET", "startPage.html", true);
+    xhttp.send();
+}
+
+function loadStartClone() {
+    let xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("page-content").innerHTML = this.responseText;
+        };
+    }
+    xhttp.open("GET", "startPage2.html", true);
     xhttp.send();
 }
 

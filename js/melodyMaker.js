@@ -5,6 +5,7 @@ function playTone(note) {
     // Play the given tone for the duration of an 8th note
     synth.triggerAttackRelease(note, "8n");
 
+
     // Add tone to allTone array in tijdlijn object
     tijdlijn.voegToonToe(note, toonIDcount);
 
@@ -13,6 +14,9 @@ function playTone(note) {
 
     // Generate ID on amount of notes added
     toonIDcount += 1;
+
+    document.getElementById('timelijn').scrollBy(100, 0);
+
 }
 /**
  * Stappenplan Tijdlijn
@@ -32,7 +36,7 @@ let tijdlijn = {
             this.toonOpslag.push({id: toonID, tone: toon})
             this.refreshPage();
         } else {
-            alert('Maximale lengte bereikt.')
+            loadVirtualRoom();
         }
         
     },
