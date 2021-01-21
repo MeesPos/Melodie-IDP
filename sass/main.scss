@@ -8,6 +8,10 @@
     color: $white;
 }
 
+body, html{
+    overflow: hidden
+}
+
 @import 'loader';
 @import 'header';
 @import 'carousel';

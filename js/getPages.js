@@ -5,7 +5,7 @@ function loadStart() {
             document.getElementById("page-content").innerHTML = this.responseText;
 
             $(".myLoader").fakeLoader({
-                timeToHide: 1,
+                timeToHide: 10000,
                 bgColor: "#222222",
                 spinner: "spinner6",
                 zIndex: "999"
