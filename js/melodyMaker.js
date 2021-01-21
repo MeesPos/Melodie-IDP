@@ -53,6 +53,11 @@ let tijdlijn = {
 
         // remove object
         this.toonOpslag.splice(removeIndex, 1);
+
+        // Duratie melodie met 1 toon omlaag ( halve seconde )
+        this.duratie -= 0.5;
+        // Zet duratie verandering in DOM
+        this.refreshPage();
     },
 
     refreshPage() {
