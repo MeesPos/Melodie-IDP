@@ -1,6 +1,6 @@
 .carousel{
     height: 100vh;
-    background: url(/img/carousel_back.jpg);
+    background: url(../img/carousel_back.jpg);
     background-size: 100vw 100vh;
     text-align: center;
     overflow: hidden;
@@ -63,7 +63,7 @@
         font-size: 40px!important;
         color: black!important;
         position: absolute!important;
-        top: 40%;
+        top: 27.5%;
     } & .owl-prev {
         left: 1vw;
     } & .owl-next{

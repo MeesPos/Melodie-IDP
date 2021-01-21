@@ -1,14 +1,14 @@
 @font-face {
   font-family: Impact;
-  src: url(/fonts/impact.ttf);
+  src: url(../fonts/impact.ttf);
 }
 @font-face {
   font-family: Akzidenz Regular;
-  src: url(/fonts/Akzidenz-grotesk-regular.ttf);
+  src: url(../fonts/Akzidenz-grotesk-regular.ttf);
 }
 @font-face {
   font-family: Akzidenz Bold;
-  src: url(/fonts/Akzidenz-grotesk-bold.ttf);
+  src: url(../fonts/Akzidenz-grotesk-bold.ttf);
 }
 * {
   margin: 0;
@@ -87,7 +87,7 @@ body, html {
 .header {
   text-align: center;
   height: 100vh;
-  background-image: url(/img/header_back.jpg);
+  background-image: url(../img/header_back.jpg);
   background-size: 100vw 100vh;
 }
 .header__titel {
@@ -140,7 +140,7 @@ h1 {
 
 .carousel {
   height: 100vh;
-  background: url(/img/carousel_back.jpg);
+  background: url(../img/carousel_back.jpg);
   background-size: 100vw 100vh;
   text-align: center;
   overflow: hidden;
@@ -200,7 +200,7 @@ h1 {
   font-size: 40px !important;
   color: black !important;
   position: absolute !important;
-  top: 40%;
+  top: 27.5%;
 }
 .owl-nav .owl-prev {
   left: 1vw;
@@ -218,7 +218,7 @@ h1 {
 
 #melody {
   height: 100vh;
-  background: url(/img/melody_back.jpg);
+  background: url(../img/melody_back.jpg);
   background-size: 100vw 100vh;
   display: table;
   width: 100vw;
@@ -442,7 +442,7 @@ h1 {
 .virtualRoom {
   height: 100vh;
   width: 100vw;
-  background-image: url(/img/header_back.jpg);
+  background-image: url(../img/header_back.jpg);
   background-size: 100vw 100vh;
 }
 

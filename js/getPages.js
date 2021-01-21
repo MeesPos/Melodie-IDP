@@ -77,8 +77,8 @@ function loadArtist() {
 
 function initCarousel() {
     setTimeout(function () {
-        const prevIcon = '<img src="/img/arrows/left.png">';
-        const nextIcon = '<img src="/img/arrows/right.png">';
+        const prevIcon = '<img src="img/arrows/left.png">';
+        const nextIcon = '<img src="img/arrows/right.png">';
 
         $('.owl-carousel').owlCarousel({
             loop: true,
