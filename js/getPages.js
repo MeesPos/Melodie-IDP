@@ -11,26 +11,26 @@ function loadStart() {
                 zIndex: "999"
             });
 
-            // setTimeout(function () {
-                // let modal = document.getElementById("video-modal");
+            setTimeout(function () {
+                let modal = document.getElementById("video-modal");
 
-                // modal.style.display = "block";
+                modal.style.display = "block";
 
-                // window.onclick = function (event) {
-                    // if (event.target == modal) {
-                        // modal.style.display = "none";
-                    // }
-                // }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
 
-                // let vimeo_frame = jQuery('#vimeo_frame'),
-                    // vimeo_src = 'https://player.vimeo.com/video/84055347?autoplay=1&color=156aa6&byline=0';
+                let vimeo_frame = jQuery('#vimeo_frame'),
+                    vimeo_src = 'https://player.vimeo.com/video/503006832?autoplay=1';
 
-                // vimeo_frame.attr('src', vimeo_src);
-            // }, 8500)
+                vimeo_frame.attr('src', vimeo_src);
+            }, 8500)
 
             // setTimeout(function() {
             // modal.style.display = "none";
-            // }, 10000); Moet nog naar tijd van Mitchel zijn video
+            // }, 10000);
         };
     }
     xhttp.open("GET", "startPage.html", true);
