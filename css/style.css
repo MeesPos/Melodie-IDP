@@ -17,6 +17,10 @@
   color: #ebebeb;
 }
 
+body, html {
+  overflow: hidden;
+}
+
 .o-page-loader {
   display: block;
   position: fixed;
@@ -471,7 +475,7 @@ h1 {
 
 /* Modal Content/Box */
 .modal-content {
-  margin: 15% auto;
+  margin: 2% auto;
   width: 80%;
 }
 
